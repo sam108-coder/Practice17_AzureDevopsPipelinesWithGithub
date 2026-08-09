@@ -8,13 +8,11 @@ const pool = mysql.createPool({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-
     waitForConnections: true,
     connectionLimit: 5
 });
 
 async function saveTestExecution(data) {
-
     const query = `
         INSERT INTO test_execution
         (
@@ -50,6 +48,11 @@ async function saveTestExecution(data) {
     await pool.execute(query, values);
 }
 
+async function closeDatabase() {
+    await pool.end();
+}
+
 module.exports = {
-    saveTestExecution
+    saveTestExecution,
+    closeDatabase
 };
