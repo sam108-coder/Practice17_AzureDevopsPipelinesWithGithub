@@ -16,7 +16,7 @@ trigger:
 
 pool:
   # vmImage: 'ubuntu-latest'
-  vmImage: Defaults
+    vmImage: 'windows-latest'
 
 steps:
 
