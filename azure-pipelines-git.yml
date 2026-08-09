@@ -3,16 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-# trigger:
-#   - main
+trigger:
+  - main
 
-schedules:
-  - cron: "*/5 * * * *"  # Schedule to run every 5 minutes
-    displayName: "Run Every 5 Minutes"
-    branches:
-      include:
-        - main  # Specify the branch you want to trigger the pipeline on
-    always: true # Ensure the pipeline runs even if there are no code changes
+# schedules:
+#   - cron: "*/5 * * * *"  # Schedule to run every 5 minutes
+#     displayName: "Run Every 5 Minutes"
+#     branches:
+#       include:
+#         - main  # Specify the branch you want to trigger the pipeline on
+#     always: true # Ensure the pipeline runs even if there are no code changes
 
 pool:
   vmImage: 'ubuntu-latest'
