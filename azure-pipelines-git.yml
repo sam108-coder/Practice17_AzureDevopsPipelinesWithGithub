@@ -43,7 +43,7 @@ steps:
 
   # Run Playwright tests
   # - script: npx playwright test --project=$(browser) --grep=$(tagName)
-  - script: npx playwright test --project=$(browser) --grep=$(tagName)
+  - script: npx playwright test --project=$(browser)
     displayName: 'Run Playwright tests'
     env:
       CI: 'true'
