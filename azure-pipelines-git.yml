@@ -15,7 +15,8 @@ trigger:
 #     always: true # Ensure the pipeline runs even if there are no code changes
 
 pool:
-  vmImage: 'ubuntu-latest'
+  # vmImage: 'ubuntu-latest'
+  vmImage: Defaults
 
 steps:
 
