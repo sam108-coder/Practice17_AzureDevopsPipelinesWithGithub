@@ -44,6 +44,20 @@ steps:
     displayName: 'Run Playwright tests'
     env:
       CI: 'true'
+  
+  - script: scripts/save-report-to-db.js
+    displayName: 'Save Playwright Report to Database'
+    condition: always()
+    env:
+      DB_HOST: $(DB_HOST)
+      DB_PORT: $(DB_PORT)
+      DB_USER: $(DB_USER)
+      DB_PASSWORD: $(DB_PASSWORD)
+      DB_NAME: $(DB_NAME)
+      BUILD_BUILDID: $(Build.BuildId)
+      BUILD_BUILDNUMBER: $(Build.BuildNumber)
+      BUILD_SOURCEBRANCH: $(Build.SourceBranch)
+      TEST_ENV: 'QA'
 
   # Publish Playwright HTML report
   - task: PublishPipelineArtifact@1
