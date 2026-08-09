@@ -17,7 +17,7 @@ trigger:
 # pool:
 #   vmImage: 'ubuntu-latest'
 pool:
-  name: LocalAgent
+  name: LocalAgents
 
 steps:
 
