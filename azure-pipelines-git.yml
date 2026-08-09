@@ -45,7 +45,7 @@ steps:
     env:
       CI: 'true'
   
-  - script: scripts/save-report-to-db.js
+  - script: node scripts/save-report-to-db.js
     displayName: 'Save Playwright Report to Database'
     condition: always()
     env:
