@@ -68,7 +68,7 @@ steps:
     condition: always()
     inputs:
       targetPath: 'playwright-report'
-      artifact: 'playwright-HTML-report-$(Build.BuildId)'
+      artifact: 'playwright-HTML-report-$(Build.BuildId)-attempt-$(System.JobAttempt)'
       publishLocation: pipeline
 
   - task: PublishTestResults@2
