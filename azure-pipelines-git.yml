@@ -42,6 +42,7 @@ steps:
     displayName: 'Install Playwright browsers'
 
   # Run Playwright tests
+  # - script: npx playwright test --project=$(browser) --grep=$(tagName)
   - script: npx playwright test --project=$(browser) --grep=$(tagName)
     displayName: 'Run Playwright tests'
     env:
