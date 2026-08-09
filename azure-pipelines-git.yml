@@ -14,9 +14,10 @@ trigger:
 #         - main  # Specify the branch you want to trigger the pipeline on
 #     always: true # Ensure the pipeline runs even if there are no code changes
 
+# pool:
+#   vmImage: 'ubuntu-latest'
 pool:
-  vmImage: 'ubuntu-latest'
-
+  name: LocalAgent
 
 steps:
 
